@@ -6,7 +6,18 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
-<body>
-    
+<body>  
 </body>
+<script>
+    function getComputerChoice() {
+        let getRandomNumber= (Math.floor(Math.random() * 3)) + 1
+        let pcOption = ""
+        if (getRandomNumber === 1) {pcOption = "sicssors"}
+        else if (getRandomNumber === 2) {pcOption = "rock" }
+        else if (getRandomNumber === 3) {pcOption = "paper" }
+        return pcOption
+    }   
+
+    getComputerChoice()
+</script>
 </html>
