@@ -4,10 +4,31 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+    <title>RPC gamet</title>
 </head>
-<body>  
+<body>
+    <h1>Rock Paper Scissors</h1>
+    <h2>make your choice below</h2>
+    <div class="buttons-container">
+        <button class="choice-btn" id="btn-rock" value="rock">
+            <img src="./icons/rock-svgrepo-com.svg" alt="rock">
+        </button>
+        <button class="choice-btn" id="btn-paper" value="paper">
+            <img src="./icons/paper-svgrepo-com.svg" alt="paper">
+        </button>
+        <button class="choice-btn" id="btn-scissors" value="scissors">
+            <img src="./icons/scissors-svgrepo-com.svg" alt="scissors">
+        </button>
+    </div>
+    <h2 id="winner-showing">
+        Who`s gonna win?
+    </h2>
+    <div class="scores container">
+        <p>player score <span id="player-score">0</span></p>
+        <p>computer score <span id="pc-score">0</span></p>
+    </div>
 </body>
-<script>
-</script>
+<script src="app.js"></script>
+<script src="colorizeButtons.js"></script>
 </html>

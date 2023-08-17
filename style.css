@@ -1,0 +1,9 @@
+.won {
+    background-color: green;
+}
+
+.lost {
+    background-color: red;
+}
+
+.draw {background-color: blue;}

@@ -13,7 +13,8 @@ buttons.forEach(btn => {
     btn.addEventListener('click', () => {
         playerSelection = btn.value; //select choiche determined on the value attribute of each button
         computerSelection = getComputerChoice() //random select a choice for the computer using the function 
-        scoreCount(playRound(playerSelection, computerSelection)) //play a round with the values defined above and count the score
+        scoreCount(playRound(playerSelection, computerSelection))
+        colorizeButtons(computerSelection, playerSelection, playRound(playerSelection, computerSelection)) //play a round with the values defined above and count the score
         declareWinner(computerScore, playerScore)
     });
 });
