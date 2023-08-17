@@ -63,13 +63,13 @@ function scoreCount(result) {
 function declareWinner(checkComputer, checkPlayer) {
     if (checkComputer == 5) {
         document.body.innerHTML = 
-        `<h1>YOU LOST</h1>
-        <button onClick="window.location.reload();">Replay</button>`
+        `<h1 class="final-title">YOU LOST</h1>
+        <button class="final-btn" onClick="window.location.reload();">Replay</button>`
 
     } else if (checkPlayer == 5) {
         document.body.innerHTML = 
-        `<h1>YOU WON</h1>
-        <button onClick="window.location.reload();">Replay</button>`
+        `<h1 class="final-title">YOU WON</h1>
+        <button class="final-btn" onClick="window.location.reload();">Replay</button>`
     }
 }
 
