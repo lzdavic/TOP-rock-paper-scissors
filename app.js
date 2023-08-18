@@ -19,23 +19,24 @@ buttons.forEach(btn => {
     });
 });
 
-function getComputerChoice() {
+function getComputerChoice() { //randomize an opition for pcChoice
     let getRandomNumber = (Math.floor(Math.random() * 3))
     let pcOption = ["scissors", "rock", "paper"]
     return pcOption[getRandomNumber]
 }
 
 function playRound(player, computer) {
-    if (player == computer) {
+    //check tie match
+    if (player == computer) { 
         return ("draw")
     }
-    else if
+    else if //check player win
         ((player == "rock" && computer == "scissors") ||
         (player == "scissors" && computer == "paper") ||
         (player == "paper" && computer == "rock")) {
         return ("playerWin")
     }
-    else if
+    else if //check player loss
         ((computer == "rock" && player == "scissors") ||
         (computer == "scissors" && player == "paper") ||
         (computer == "paper" && player == "rock")) {
@@ -44,22 +45,23 @@ function playRound(player, computer) {
 }
 
 function scoreCount(result) {
-    if (result == 'draw') {
+    if (result == 'draw') { //randomize and exhibit message for draw match
         showResult.innerHTML = drawMessages[(Math.floor(Math.random() * 3))]
 
-    } else if (result =='playerWin') {
+    } else if (result =='playerWin') { //choiche match win message based on player scores
         showResult.innerHTML = winMessages[(playerScore)]
         playerScore ++
         playerScoreShow.innerHTML = playerScore
 
 
-    } else if (result == 'pcWin') {
+    } else if (result == 'pcWin') { //choice match loss message based on computer score
         showResult.innerHTML = lossMessages[(computerScore)]
         computerScore ++
         computerScoreShow.innerHTML = computerScore
     }
 }
 
+//check winner on five points and end the game, changing the <body> to a title and a button that refresh
 function declareWinner(checkComputer, checkPlayer) {
     if (checkComputer == 5) {
         document.body.innerHTML = 
