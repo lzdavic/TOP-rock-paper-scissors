@@ -1,6 +1,6 @@
 function colorizeButtons(computerInput, playerInput, result) {
 buttons.forEach(btn =>{
-    btn.classList.remove("lost", "wonf", "draw")
+    btn.classList.remove("lost", "won", "draw")
     if (btn.value == computerInput && result == "playerWin") { //Computer choice red when lost
         btn.classList.add("lost")
     }
